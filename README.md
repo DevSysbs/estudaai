@@ -1,6 +1,28 @@
-# EstudaAi — Etapa 1: login e cadastro
+# EstudaAi — Etapa 1.3: identidade compartilhada de login e cadastro
 
 Interface em Next.js, TypeScript e Tailwind CSS, recriada em componentes a partir das referências fornecidas. Os screenshots originais não fazem parte do site. Logotipo, campos, botões, ícones, textos e composição são elementos independentes. A paisagem é uma nova imagem produzida para este projeto.
+
+## Atualização 1.3 — login com a composição do cadastro
+
+Uso apenas local. Coolify ficará para a primeira versão completa.
+
+O login agora usa exatamente o mesmo painel esquerdo do cadastro: título, descrição, benefícios, frases e estatísticas. À direita, o login compartilha o formato, a largura e os espaçamentos do cartão de cadastro, com a logo centralizada acima do título. Os campos de e-mail e senha, recuperação, checkbox e botões de login permanecem próprios do acesso à conta.
+
+### Atualizar a cópia local
+
+1. Pare o servidor com Ctrl+C.
+2. Extraia o ZIP em uma pasta separada.
+3. Copie e substitua `app/globals.css`, `components/auth-screen.tsx` e `README.md` na sua pasta atual.
+4. Rode `npm run dev`. Não há dependências novas.
+5. Confira `/login` e `/cadastro`. Use Ctrl+Shift+R se a aba mantiver estilos antigos.
+
+```bash
+npm run build
+git add app/globals.css components/auth-screen.tsx README.md
+git commit -m "feat: unifica visual do login com o cadastro"
+```
+
+Validação: compilação de produção e TypeScript. A inspeção visual em navegador não foi executada neste ambiente. Nenhum deploy foi realizado.
 
 ## O que está pronto
 
@@ -83,7 +105,7 @@ git push -u origin main
 
 Se aparecer uma janela de autenticação do GitHub, conclua o login. Não coloque token na URL nem compartilhe credenciais no chat. O ZIP não contém histórico Git: os três commits acima serão criados no seu computador.
 
-## 5. Publicar a prévia no Coolify
+## 5. Referência futura — publicar no Coolify após a primeira versão completa
 
 1. Abra seu projeto/ambiente no Coolify e adicione uma aplicação a partir do GitHub.
 2. Para um repositório privado, conecte a integração GitHub App e conceda acesso ao repositório `estudaai`.

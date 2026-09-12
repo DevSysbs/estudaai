@@ -76,8 +76,8 @@ export default function AuthScreen({ mode }: { mode: Mode }) {
       setStep(2);
     } else { form.current?.reset(); setStep(3); }
   }
-  return <main className={`auth-page ${register ? 'register-page' : 'login-page'}`}>
-    <Landscape mode={mode} />
+  return <main className={`auth-page register-page ${register ? '' : 'login-page'}`}>
+    <Landscape mode="cadastro" />
     <section className="auth-side" aria-label={register ? 'Cadastro' : 'Login'}>
       <nav className="account-nav" aria-label="Acesso à conta"><span>{register ? 'Já tem uma conta?' : 'Ainda não tem uma conta?'}</span><Link href={register ? '/login' : '/cadastro'}>{register ? 'Entrar' : 'Criar conta'}</Link></nav>
       <div className="auth-card">

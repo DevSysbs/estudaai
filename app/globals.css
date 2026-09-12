@@ -8,3 +8,166 @@
 @media(max-width:760px){.auth-page{display:flex;flex-direction:column}.landscape{display:none}.auth-side,.register-page .auth-side{padding:20px 20px 32px;min-height:100svh}.account-nav,.register-page .account-nav{margin:0 0 24px;font-size:14px;gap:12px}.account-nav a,.register-page .account-nav a{min-width:108px;font-size:14px;padding:11px 16px}.auth-card,.register-page .auth-card{width:100%;max-width:570px;margin:0 auto;padding:28px 25px;border:1px solid #edf1f7}.form-title{margin:27px 0}.form-title h2{font-size:28px}.form-title p{font-size:16px}.brand-centered .brand-name{font-size:33px}.field{margin-bottom:25px}.register-page .form-title h2{font-size:33px}.register-page .form-title p{font-size:15px}.login-footer{max-width:400px;align-self:center;font-size:14px;margin-top:22px}.register-page .security-note strong{font-size:15px}.register-page .security-note p{font-size:13px}.security-note{padding:15px 13px}.security-note p{font-size:13px}.register-page .input-wrap input{font-size:16px}.terms{margin:22px 0;font-size:13px}.social-buttons button{min-height:49px}.steps{margin-bottom:25px}.register-page .auth-card{padding-bottom:24px}}
 @media(max-width:460px){.auth-side,.register-page .auth-side{padding:16px 12px 25px}.auth-card,.register-page .auth-card{padding:25px 18px}.field-row{grid-template-columns:1fr;gap:0}.register-page .field{margin-bottom:21px}.register-page .form-title h2{font-size:31px}.form-title h2{font-size:27px}.form-title p{font-size:15px}.input-wrap{gap:14px;padding:0 13px}.social-buttons,.register-page .social-buttons{gap:7px}.social-buttons button{gap:6px;font-size:13px}.social-buttons svg{width:21px;height:21px}.security-note strong{font-size:13px}.security-note p{font-size:12px}.security-note{gap:11px}.security-note>svg{width:28px}.register-page .security-note>svg{width:29px}.register-page .security-note{padding:14px 12px;gap:12px}.register-page .security-note strong{font-size:14px}.password-hint{margin:-4px 0 17px}.divider{gap:17px}.login-footer{padding:0 10px}.brand-centered p{font-size:13px}.text-button{font-size:13px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+/* Versão 1.2: composição original, redesenhada com dimensões menores.
+   A unidade responde à altura; não há zoom, transform:scale nem ajuste em JS. */
+@media (min-width:761px) and (min-height:600px){
+  .auth-page{
+    --u:clamp(.6px,calc(100svh / 1000),1px);
+    grid-template-columns:47% 53%;
+    height:100svh;min-height:0;
+  }
+  .landscape,.landscape-register{
+    height:100%;min-height:0;
+    padding:calc(30 * var(--u)) clamp(24px,3.1vw,52px);
+    border-radius:0 18px 18px 0;
+    background-position:58% center;
+  }
+  .landscape .brand{gap:calc(15 * var(--u))}
+  .landscape .brand-symbol{width:calc(40 * var(--u))}
+  .landscape .brand-name{font-size:calc(32 * var(--u))}
+  .landscape .brand p{font-size:clamp(12px,calc(14 * var(--u)),14px)}
+  .landscape-content{margin-top:calc(48 * var(--u))}
+  .landscape-register .landscape-content{margin-top:calc(82 * var(--u))}
+  .landscape h1,.landscape-register h1{
+    font-size:clamp(28px,calc(46 * var(--u)),46px);
+    line-height:1.04;letter-spacing:-1.2px;margin:0 0 calc(21 * var(--u));
+  }
+  .landscape .intro{
+    max-width:calc(410 * var(--u));
+    font-size:clamp(14px,calc(18 * var(--u)),18px);
+    line-height:1.35;margin-bottom:calc(22 * var(--u));
+  }
+  .landscape-register .intro{max-width:calc(505 * var(--u))}
+  .features,.landscape-register .features{gap:calc(14 * var(--u))}
+  .features li{gap:calc(17 * var(--u))}
+  .feature-icon{width:calc(49 * var(--u));height:calc(49 * var(--u));border-radius:10px}
+  .feature-icon svg{width:calc(25 * var(--u));height:calc(25 * var(--u))}
+  .features strong{font-size:clamp(12px,calc(15 * var(--u)),15px)}
+  .features p{font-size:clamp(12px,calc(14 * var(--u)),14px);margin-top:calc(3 * var(--u));line-height:1.35}
+  .landscape-register .features li{width:calc(354 * var(--u));min-height:calc(64 * var(--u));gap:calc(16 * var(--u))}
+  .landscape-register .feature-icon{height:calc(63 * var(--u));width:calc(60 * var(--u))}
+  .landscape-register .feature-icon svg{width:calc(29 * var(--u));height:calc(29 * var(--u))}
+  .top-quote{display:block;right:5%;top:15%;font-size:calc(26 * var(--u))}
+  .landscape-register .top-quote{right:6%;top:8%;font-size:calc(26 * var(--u))}
+  .bottom-quote{font-size:calc(26 * var(--u));width:calc(215 * var(--u));margin:calc(30 * var(--u)) 0 calc(18 * var(--u)) 12px}
+  .stats{margin-top:auto;flex-shrink:0}
+  .stats>div{padding:0 calc(25 * var(--u))}
+  .stats strong{font-size:calc(23 * var(--u))}
+  .stats small{font-size:clamp(12px,calc(14 * var(--u)),14px)}
+  .landscape-register .stats{padding:calc(18 * var(--u));margin-top:auto}
+  .landscape-register .stats>div{padding:0 calc(19 * var(--u));gap:calc(14 * var(--u))}
+  .landscape-register .stats strong{font-size:calc(21 * var(--u))}
+  .landscape-register .stats small{font-size:clamp(12px,calc(13 * var(--u)),13px)}
+  .landscape-register .stats svg{width:calc(27 * var(--u));height:calc(27 * var(--u))}
+  .register-bottom{font-size:calc(21 * var(--u));margin-top:calc(28 * var(--u))}
+  .auth-side,.register-page .auth-side{
+    height:100%;min-height:0;
+    padding:calc(22 * var(--u)) clamp(22px,3vw,54px);
+    align-items:center;justify-content:center;
+  }
+  .account-nav,.register-page .account-nav{
+    width:100%;max-width:calc(650 * var(--u));
+    flex-shrink:0;min-height:0;margin:0 0 calc(22 * var(--u));
+    font-size:clamp(12px,calc(14 * var(--u)),14px);
+  }
+  .register-page .account-nav{max-width:calc(720 * var(--u))}
+  .account-nav a,.register-page .account-nav a{
+    padding:calc(11 * var(--u)) calc(22 * var(--u));
+    min-width:calc(118 * var(--u));font-size:clamp(12px,calc(14 * var(--u)),14px);
+  }
+  .auth-card,.register-page .auth-card{
+    width:100%;max-width:calc(650 * var(--u));
+    margin:0;padding:calc(26 * var(--u)) calc(35 * var(--u));
+    flex-shrink:0;border-radius:14px;
+  }
+  .register-page .auth-card{max-width:calc(720 * var(--u));padding:calc(24 * var(--u)) calc(30 * var(--u))}
+  .brand-centered{gap:calc(5 * var(--u))}
+  .brand-centered .brand-symbol{width:calc(40 * var(--u))}
+  .brand-centered .brand-name{font-size:calc(33 * var(--u))}
+  .brand-centered p{font-size:clamp(12px,calc(14 * var(--u)),14px)}
+  .form-title{margin:calc(24 * var(--u)) 0}
+  .form-title h2{font-size:calc(31 * var(--u));margin-bottom:calc(6 * var(--u))}
+  .form-title p,.register-page .form-title p{font-size:clamp(13px,calc(16 * var(--u)),16px);line-height:1.4}
+  .register-page .form-title{margin:0 0 calc(22 * var(--u))}
+  .register-page .form-title h2{font-size:calc(38 * var(--u));margin-bottom:calc(5 * var(--u))}
+  .steps{margin:0 0 calc(23 * var(--u))}
+  .steps span{width:calc(34 * var(--u));height:calc(34 * var(--u));margin-bottom:calc(5 * var(--u))}
+  .steps small{font-size:clamp(12px,calc(14 * var(--u)),14px)}
+  .steps li:not(:last-child)::after{top:calc(17 * var(--u))}
+  .field,.register-page .field{margin-bottom:calc(20 * var(--u))}
+  .field-heading{margin-bottom:calc(7 * var(--u))}
+  .field label,.text-button{font-size:clamp(12px,calc(14 * var(--u)),14px)}
+  .input-wrap,.register-page .input-wrap{
+    height:calc(47 * var(--u));padding:0 calc(15 * var(--u));gap:calc(17 * var(--u));
+  }
+  .input-wrap input,.register-page .input-wrap input{
+    font-size:clamp(13px,calc(16 * var(--u)),16px);padding:calc(10 * var(--u)) 0;
+  }
+  .input-wrap>svg,.eye-button svg{width:calc(21 * var(--u));height:calc(21 * var(--u))}
+  .field-row{gap:calc(22 * var(--u))}
+  .remember{font-size:clamp(12px,calc(14 * var(--u)),14px);margin:calc(-3 * var(--u)) 0 calc(19 * var(--u))}
+  .remember input{width:calc(22 * var(--u));height:calc(22 * var(--u))}
+  .primary-button{min-height:calc(47 * var(--u));font-size:clamp(14px,calc(17 * var(--u)),17px);padding:calc(11 * var(--u)) 16px}
+  .divider,.register-page .divider{font-size:clamp(12px,calc(14 * var(--u)),14px);margin:calc(18 * var(--u)) 0;gap:calc(25 * var(--u))}
+  .social-buttons,.register-page .social-buttons{gap:calc(12 * var(--u))}
+  .social-buttons button{min-height:calc(48 * var(--u));font-size:clamp(12px,calc(14 * var(--u)),14px);padding:calc(9 * var(--u)) 4px;gap:calc(10 * var(--u))}
+  .social-buttons svg{width:calc(25 * var(--u));height:calc(25 * var(--u))}
+  .password-hint{font-size:clamp(12px,calc(13 * var(--u)),13px);padding:calc(10 * var(--u)) calc(12 * var(--u));margin:calc(-4 * var(--u)) 0 calc(14 * var(--u));line-height:1.35;gap:10px}
+  .terms{font-size:clamp(12px,calc(13 * var(--u)),13px);line-height:1.55;margin:calc(20 * var(--u)) 0}
+  .security-note,.register-page .security-note{
+    min-height:0;padding:calc(16 * var(--u)) calc(19 * var(--u));gap:calc(17 * var(--u));margin-top:calc(20 * var(--u));
+  }
+  .register-page .security-note{margin-top:0}
+  .security-note strong,.register-page .security-note strong{font-size:clamp(12px,calc(15 * var(--u)),15px)}
+  .security-note p,.register-page .security-note p{font-size:clamp(12px,calc(13 * var(--u)),13px);line-height:1.4;margin-top:calc(4 * var(--u))}
+  .security-note>svg,.register-page .security-note>svg{width:calc(33 * var(--u));height:calc(36 * var(--u))}
+  .login-footer{flex-shrink:0;font-size:calc(16 * var(--u));margin-top:calc(18 * var(--u));line-height:1.4}
+  .login-footer span{font-size:calc(14 * var(--u))}
+}
+@media (min-width:761px) and (max-width:1100px) and (min-height:600px){
+  .auth-page{grid-template-columns:46% 54%}
+  .landscape,.landscape-register{padding-left:24px;padding-right:24px}
+  .top-quote{display:none}
+  .landscape-register .top-quote{display:block;font-size:22px;top:10%}
+  .landscape h1,.landscape-register h1{font-size:clamp(28px,3.5vw,37px)}
+  .auth-side,.register-page .auth-side{padding-left:20px;padding-right:20px}
+}
+@media (min-width:761px) and (min-height:600px) and (max-height:800px){
+  .auth-side,.register-page .auth-side{padding-top:12px;padding-bottom:12px}
+  .account-nav,.register-page .account-nav{margin-bottom:12px}
+  .register-page .auth-card{padding-top:16px;padding-bottom:16px}
+  .register-page .form-title{margin-bottom:14px}
+  .register-page .steps{margin-bottom:14px}
+  .register-page .field{margin-bottom:12px}
+  .register-page .field-heading{margin-bottom:5px}
+  .register-page .password-hint{padding:8px 10px;margin-bottom:10px}
+  .register-page .divider{margin:12px 0}
+  .register-page .terms{margin:12px 0;line-height:1.4}
+  .register-page .security-note{padding:10px 12px}
+  .landscape-register .landscape-content{margin-top:calc(65 * var(--u))}
+  .landscape .features{gap:calc(11 * var(--u))}
+  .landscape .bottom-quote{margin-top:calc(19 * var(--u));margin-bottom:calc(12 * var(--u))}
+}
+/* Cadastro: mesma composição da referência, com ritmo vertical mais compacto. */
+@media (min-width:761px) and (min-height:600px){
+  .register-page .auth-card{padding-top:calc(18 * var(--u));padding-bottom:calc(18 * var(--u))}
+  .register-page .form-title{margin-bottom:calc(16 * var(--u))}
+  .register-page .form-title h2{font-size:calc(34 * var(--u))}
+  .register-page .steps{margin-bottom:calc(14 * var(--u))}
+  .register-page .field{margin-bottom:calc(12 * var(--u))}
+  .register-page .field-heading{margin-bottom:calc(6 * var(--u))}
+  .register-page .input-wrap{height:calc(44 * var(--u))}
+  .register-page .password-hint{padding-top:calc(8 * var(--u));padding-bottom:calc(8 * var(--u))}
+  .register-page .divider{margin:calc(12 * var(--u)) 0}
+  .register-page .terms{margin:calc(14 * var(--u)) 0}
+  .register-page .security-note{padding-top:calc(12 * var(--u));padding-bottom:calc(12 * var(--u))}
+}
+
+/* Versão 1.3: ambos os acessos compartilham a composição do cadastro. */
+.login-page .form-title{margin-top:24px}
+.login-page .security-note{margin-top:20px}
+@media (min-width:761px) and (min-height:600px){
+  .login-page .form-title{margin-top:calc(24 * var(--u))}
+  .login-page .security-note{margin-top:calc(20 * var(--u))}
+}
